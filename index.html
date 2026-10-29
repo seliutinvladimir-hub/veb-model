@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D-модель растения</title>
+
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f0eb;
+      color: #292821;
+    }
+
+    header {
+      padding: 24px 16px 8px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #66645d;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 65vh;
+      min-height: 350px;
+      background: #ffffff;
+      border-radius: 16px;
+      --poster-color: #ffffff;
+    }
+
+    .hint {
+      text-align: center;
+      font-size: 14px;
+      padding: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>3D-модель растения</h1>
+    <p>Интерактивная веб-презентация</p>
+  </header>
+
+  <main>
+    <model-viewer
+      src="assets/Горшок.glb"
+      alt="Трёхмерная модель растения в горшке"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      shadow-intensity="1"
+      exposure="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look">
+    </model-viewer>
+
+    <div class="hint">
+      Вращайте модель мышью и приближайте колёсиком.
+      На телефоне используйте жесты.
+    </div>
+  </main>
+</body>
+</html>
